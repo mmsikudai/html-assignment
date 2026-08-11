@@ -432,6 +432,14 @@ button:hover {
     line-height: 1.6;
 }
 
+.tarot-card {
+    transition: 0.5s;
+}
+
+.tarot-card h2,
+.tarot-card p {
+    transition: 0.5s;
+}
 
 /* ========================================
    FORM
@@ -525,6 +533,22 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* TAROT MAGIC BUTTON */
+
+.magic-button {
+    text-align: center;
+    margin: 20px;
+}
+
+.tarot-card {
+    transition: background-color 0.5s, color 0.5s, transform 0.4s;
+}
+
+.tarot-card h2,
+.tarot-card p {
+    transition: color 0.5s;
 }
 
 
