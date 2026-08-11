@@ -1,50 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Contact</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - PCR Whimsical Shop</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
+
 
 <body>
 
+
 <nav class="navbar">
 
-<div class="nav-logo">PCR WHIMSICAL SHOP</div>
+<div class="nav-logo">
+PCR WHIMSICAL SHOP
+</div>
+
 
 <div class="nav-links">
+
 <a href="index.html">Home</a>
+
 <a href="tarot.html">Tarot Cards</a>
+
 <a href="incense.html">Incense</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="contact.html">Contact</a>
+
 </div>
 
 </nav>
 
+
 <h1>Order Form</h1>
 
-<form>
 
-<label>Name</label>
-<input type="text">
+<form id="orderForm">
 
-<label>Email</label>
-<input type="email">
 
-<label>Product</label>
-<input type="text">
+<label for="name">
+Name
+</label>
 
-<label>Message</label>
-<textarea></textarea>
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Enter your name"
+>
 
-<button type="submit">Submit Order</button>
+
+<label for="email">
+Email
+</label>
+
+<input
+type="email"
+id="email"
+name="email"
+placeholder="Enter your email"
+>
+
+
+<label for="product">
+Product
+</label>
+
+<select id="product" name="product">
+
+<option value="">
+Select a product
+</option>
+
+<option value="Moon Tarot">
+Moon Tarot
+</option>
+
+<option value="Crystal Tarot">
+Crystal Tarot
+</option>
+
+<option value="Lavender Incense">
+Lavender Incense
+</option>
+
+<option value="Sandalwood Incense">
+Sandalwood Incense
+</option>
+
+</select>
+
+
+<label for="message">
+Message
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Enter your message"
+></textarea>
+
+
+<button type="submit">
+Submit Order
+</button>
+
+
+<p id="formMessage"></p>
+
 
 </form>
 
+
 <footer>
+
 <p>© 2026 PCR Whimsical Shop</p>
+
 </footer>
 
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
