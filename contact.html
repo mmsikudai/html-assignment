@@ -3,136 +3,177 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact - PCR Whimsical Shop</title>
+    <title>Order - PCR Whimsical Shop</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet"
+    >
 
 </head>
 
 
 <body>
 
+    <!-- NAVIGATION BAR -->
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="nav-logo">
-PCR WHIMSICAL SHOP
-</div>
+        <div class="nav-logo">
+            PCR WHIMSICAL SHOP
+        </div>
 
+        <div class="nav-links">
 
-<div class="nav-links">
+            <a href="index.html">Home</a>
 
-<a href="index.html">Home</a>
+            <a href="tarot.html">Tarot Cards</a>
 
-<a href="tarot.html">Tarot Cards</a>
+            <a href="incense.html">Incense</a>
 
-<a href="incense.html">Incense</a>
+            <a href="gallery.html">Gallery</a>
 
-<a href="gallery.html">Gallery</a>
+            <a href="contact.html">Order</a>
 
-<a href="contact.html">Contact</a>
+        </div>
 
-</div>
-
-</nav>
-
-
-<h1>Order Form</h1>
+    </nav>
 
 
-<form id="orderForm">
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <h1>✨ Place Your Order ✨</h1>
+
+        <p class="page-intro">
+            Choose your favourite magical item from PCR Whimsical Shop.
+        </p>
 
 
-<label for="name">
-Name
-</label>
+        <!-- ORDER FORM -->
 
-<input
-type="text"
-id="name"
-name="name"
-placeholder="Enter your name"
->
+        <form
+            id="orderForm"
+            action="process_order.php"
+            method="POST"
+        >
 
+            <!-- NAME -->
 
-<label for="email">
-Email
-</label>
+            <label for="name">
+                Name
+            </label>
 
-<input
-type="email"
-id="email"
-name="email"
-placeholder="Enter your email"
->
-
-
-<label for="product">
-Product
-</label>
-
-<select id="product" name="product">
-
-<option value="">
-Select a product
-</option>
-
-<option value="Moon Tarot">
-Moon Tarot
-</option>
-
-<option value="Crystal Tarot">
-Crystal Tarot
-</option>
-
-<option value="Lavender Incense">
-Lavender Incense
-</option>
-
-<option value="Sandalwood Incense">
-Sandalwood Incense
-</option>
-
-</select>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
 
 
-<label for="message">
-Message
-</label>
+            <!-- EMAIL -->
 
-<textarea
-id="message"
-name="message"
-placeholder="Enter your message"
-></textarea>
+            <label for="email">
+                Email
+            </label>
 
-
-<button type="submit">
-Submit Order
-</button>
-
-
-<p id="formMessage"></p>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
 
 
-</form>
+            <!-- PRODUCT -->
+
+            <label for="product">
+                Product
+            </label>
+
+            <select
+                id="product"
+                name="product"
+                required
+            >
+
+                <option value="">
+                    -- Select a product --
+                </option>
+
+                <option value="Rider-Waite Tarot - KSh 2,500">
+                    Rider-Waite Tarot - KSh 2,500
+                </option>
+
+                <option value="Moonlight Tarot - KSh 3,000">
+                    Moonlight Tarot - KSh 3,000
+                </option>
+
+                <option value="Lavender Incense - KSh 800">
+                    Lavender Incense - KSh 800
+                </option>
+
+                <option value="Sandalwood Incense - KSh 1,000">
+                    Sandalwood Incense - KSh 1,000
+                </option>
+
+            </select>
 
 
-<footer>
+            <!-- MESSAGE -->
 
-<p>© 2026 PCR Whimsical Shop</p>
+            <label for="message">
+                Message
+            </label>
 
-</footer>
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Enter any special request..."
+                required
+            ></textarea>
 
 
-<script src="script.js"></script>
+            <!-- SUBMIT BUTTON -->
 
+            <button type="submit">
+                ✨ Submit Order
+            </button>
+
+
+            <!-- JAVASCRIPT MESSAGE -->
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 PCR Whimsical Shop | Made with ✨
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
 
 </body>
 

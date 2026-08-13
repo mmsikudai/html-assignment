@@ -23,7 +23,6 @@ if (document.getElementById("welcomeMessage")) {
 
         document.getElementById("welcomeMessage").innerHTML =
             "Welcome to PCR Whimsical Shop! ✨";
-
     }
 }
 
@@ -38,72 +37,39 @@ if (form) {
 
     form.addEventListener("submit", function(event) {
 
-        let name =
-            document.getElementById("name").value.trim();
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let product = document.getElementById("product").value;
+        let message = document.getElementById("message").value.trim();
 
-        let email =
-            document.getElementById("email").value.trim();
-
-        let product =
-            document.getElementById("product").value.trim();
-
-        let message =
-            document.getElementById("message").value.trim();
-
-        let formMessage =
-            document.getElementById("formMessage");
-
-
+        // Check if any field is empty
         if (
-            name == "" ||
-            email == "" ||
-            product == "" ||
-            message == ""
+            name === "" ||
+            email === "" ||
+            product === "" ||
+            message === ""
         ) {
 
+            // Stop submission if information is missing
             event.preventDefault();
 
-            if (formMessage) {
-
-                formMessage.innerHTML =
-                    "⚠️ Please complete all the required fields.";
-
-                formMessage.style.color = "red";
-
-            } else {
-
-                alert("Please complete all the required fields.");
-
-            }
-
-        } else {
-
-            event.preventDefault();
-
-            if (formMessage) {
-
-                formMessage.innerHTML =
-                    "✨ Thank you, " + name +
-                    "! Your order for " + product +
-                    " has been submitted.";
-
-                formMessage.style.color = "#c21875";
-
-            } else {
-
-                alert(
-                    "✨ Thank you, " + name +
-                    "! Your order has been submitted."
-                );
-
-            }
-
-            form.reset();
+            alert("⚠️ Please complete all the required fields.");
 
         }
 
+        // IMPORTANT:
+        // If everything is filled in, we DO NOT use
+        // event.preventDefault().
+        //
+        // Therefore the form continues normally:
+        //
+        // contact.html
+        //       ↓
+        // POST
+        //       ↓
+        // process_order.php
+        //
     });
-
 }
 
 
@@ -117,19 +83,18 @@ function showInfo() {
 
     if (info) {
 
-        if (info.style.display == "none" ||
-            info.style.display == "") {
+        if (
+            info.style.display === "none" ||
+            info.style.display === ""
+        ) {
 
             info.style.display = "block";
 
         } else {
 
             info.style.display = "none";
-
         }
-
     }
-
 }
 
 
@@ -152,14 +117,28 @@ function changeColour() {
         card1.style.color = "white";
         card2.style.color = "white";
 
-        card1.querySelector("h2").style.color = "white";
-        card2.querySelector("h2").style.color = "white";
+        let heading1 = card1.querySelector("h2");
+        let heading2 = card2.querySelector("h2");
 
-        card1.querySelector("p").style.color = "white";
-        card2.querySelector("p").style.color = "white";
+        let paragraph1 = card1.querySelector("p");
+        let paragraph2 = card2.querySelector("p");
 
+        if (heading1) {
+            heading1.style.color = "white";
+        }
+
+        if (heading2) {
+            heading2.style.color = "white";
+        }
+
+        if (paragraph1) {
+            paragraph1.style.color = "white";
+        }
+
+        if (paragraph2) {
+            paragraph2.style.color = "white";
+        }
     }
-
 }
 
 
@@ -174,5 +153,4 @@ function showProductMessage(productName) {
         " has been selected! " +
         "You can place your order through the Contact page."
     );
-
 }

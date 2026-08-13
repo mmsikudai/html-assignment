@@ -372,6 +372,15 @@ button:hover {
     object-fit: cover;
 }
 
+/* PRODUCT PRICES */
+
+.price {
+    color: #d41476;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
 
 /* IMAGE CAPTION */
 
